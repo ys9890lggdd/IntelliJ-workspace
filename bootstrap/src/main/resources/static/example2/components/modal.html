@@ -877,12 +877,14 @@
     <script type="text/javascript">
     	$('#modalLarge').on('show.bs.modal',function(e){
     	    console.log("#modalLarge 모달이 보여지기전에 ajax 호출");
-    	 	$(e.target).find('.modal-title').html("짱좋은 원피스[ajax receive data]");
- 	    	$(e.target).find('.modal-body p').html("짱좋은 원피스 상세정보[ajax receive data]");
+
     	});
     	$('#modalLarge').on('shown.bs.modal',function(e){
     	    console.log("#modalLarge 모달이 보여진후에 호출");
-    	   
+            $(e.target).find('.modal-title').html("짱좋은 원피스[ajax receive data]");
+            $(e.target).find('.modal-body p').html("짱좋은 원피스 상세정보[ajax receive data]");
+            $(e.target).find('.modal-body p').append(`<img src="https://search.pstatic.net/common?type=f&size=618x338&expire=3&refresh=true&quality=75&direct=true&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAzMTNfMTIw%2FMDAxNjc4NjczNjkzMjg2.8JRtYlRxPYOOomeAjG2eZOw-y3CLwanaNBiHvs7ITfEg.iEj6faCEE1SAmkGUdeq_KUeTUwGOfhBCyAQr0ymsotQg.JPEG.lalacucina%2F%EB%B8%8C%EB%A6%AC%EC%B9%98%EC%A6%88%EC%9A%94%EB%A6%AC2.jpg">`);
+
     	});
     	$('#modalLarge').on('hide.bs.modal',function(e){
     		console.log("#modalLarge 모달이 사라지기직전에 호출");

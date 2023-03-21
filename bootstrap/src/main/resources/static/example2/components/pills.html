@@ -752,5 +752,19 @@
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="../js/vendor.min.js"></script>
     <script src="../js/scripts.min.js"></script>
+  <script>
+      $('.nav-item a').on('show.bs.tab',function(e){
+          console.log(e.target);
+          console.log(e.relatedTarget);
+          let requstUrl= $(e.target).attr('href')
+          console.log('requestUrl-->'+requstUrl);
+          /*
+           ajax요청
+            */
+          $(requstUrl).find('p').html(requstUrl+"-->ajax response data");
+      });
+
+  </script>
+
   </body>
 </html>
